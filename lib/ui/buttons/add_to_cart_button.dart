@@ -1,3 +1,4 @@
+import 'package:animated_digit/animated_digit.dart';
 import 'package:flutter/material.dart';
 
 class AddToCartButton extends StatefulWidget {
@@ -97,9 +98,9 @@ class _AddToCartButtonState extends State<AddToCartButton> {
                 ),
                 Expanded(
                   child: Center(
-                    child: Text(
-                      '$quantity',
-                      style:
+                    child: AnimatedDigitWidget(
+                      value: quantity,
+                      textStyle:
                           widget.countTextStyle ??
                           TextStyle(
                             color: widget.countColor,
