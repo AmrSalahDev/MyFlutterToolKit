@@ -12,7 +12,7 @@ class AddToCartButton extends StatefulWidget {
   final double borderRadius;
   final double height;
   final double width;
-  final double initialWidth;
+  final double initialSize;
   final BoxShape initialShape;
   final Duration animationDuration;
   final int maxQuantity;
@@ -33,7 +33,7 @@ class AddToCartButton extends StatefulWidget {
     this.animationDuration = const Duration(milliseconds: 200),
     this.height = 40.0,
     this.width = 100.0,
-    this.initialWidth = 40.0,
+    this.initialSize = 40.0,
     this.initialShape = BoxShape.circle,
     this.countTextStyle,
   });
@@ -50,8 +50,8 @@ class _AddToCartButtonState extends State<AddToCartButton> {
     final bool isAdded = quantity > widget.minQuantity;
     return AnimatedContainer(
       duration: widget.animationDuration,
-      width: isAdded ? widget.width : widget.initialWidth,
-      height: widget.height,
+      width: isAdded ? widget.width : widget.initialSize,
+      height: isAdded ? widget.height : widget.initialSize,
       decoration: BoxDecoration(
         color: widget.backgroundColor,
         borderRadius: BorderRadius.circular(
