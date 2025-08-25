@@ -17,6 +17,9 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+executables:
+  create_launch:create: bin/create.dart
+
 flutter:
 
   # To add assets to your package, add an assets section, like this:
