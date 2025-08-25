@@ -18,7 +18,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
 
 executables:
-  create_launch:create: bin/create.dart
+  create_launch:create_launch: bin/create_launch.dart
 
 flutter:
 
