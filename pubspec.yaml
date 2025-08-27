@@ -10,7 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  animated_digit: ^3.3.0  
+  animated_digit: ^3.3.0
+  email_validator: ^3.0.0
+  password_strength: ^0.2.0  
 
 dev_dependencies:
   flutter_test:
