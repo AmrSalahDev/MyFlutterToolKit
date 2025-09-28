@@ -153,6 +153,21 @@ class Validators {
     return null;
   }
 
+   static String? confirmPassword({
+    String? value,
+    String? password,
+    String? errorMsg,
+    String? emptyMsg,
+  }) {
+    if (value == null || value.trim().isEmpty) {
+      return emptyMsg ?? 'Please enter your password';
+    }
+    if (value != password) {
+      return errorMsg ?? 'Passwords do not match';
+    }
+    return null;
+  }
+
   static String? name({String? value, String? emptyMsg}) {
     if (value == null || value.trim().isEmpty) {
       return emptyMsg ?? 'Please enter your name';
