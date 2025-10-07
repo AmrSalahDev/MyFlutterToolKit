@@ -97,6 +97,30 @@ class Validators {
     return null;
   }
 
+  static String? checkDuplicateEmail({
+    String? firstEmail,
+    String? secondEmail,
+    String? errorMsg,
+    String? emptyMsg,
+    String? duplicateMsg,
+  }) {
+    if (firstEmail == null || firstEmail.trim().isEmpty) {
+      return emptyMsg ?? 'Please enter your email';
+    }
+
+    if (!EmailValidator.validate(firstEmail)) {
+      return errorMsg ?? 'Enter a valid email';
+    }
+
+    // check duplicate
+    if (secondEmail != null &&
+        firstEmail.trim().toLowerCase() == secondEmail.trim().toLowerCase()) {
+      return duplicateMsg ?? 'You have signed up with this email';
+    }
+
+    return null; // valid
+  }
+
   static String? phone({
     String? value,
     String? errorMsg,
